@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:id="@+id/drawerLayout"
+    tools:context=".MainActivity">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="ViDkrypt"
+                app:titleTextColor="@color/white"
+                app:navigationIcon="@drawable/ic_baseline_person_24"
+                app:navigationIconTint="@color/white"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+   <!-- <RelativeLayout
+        android:layout_marginTop="?actionBarSize"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/selectEncrypt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/view"
+            android:background="#FFE9A2"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clipToPadding="true"
+                app:cardBackgroundColor="#E2E8AB"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/openVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="Encrypt File"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:id="@+id/selectDecrypt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectEncrypt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#FFE9A2"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clipToPadding="true"
+                app:cardBackgroundColor="#E2E8AB"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="Decrypt File"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:background="@color/recBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/enc_image"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="150dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/text" />
+
+                    <TextView
+                        android:id="@+id/enc_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="150dp"
+                        android:padding="13dp"
+                        android:text="Want to keep your file\nSecure\n\nClick Eycrypt below"
+                        android:textColor="@color/white"
+                        android:textAlignment="textStart"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo_1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/lock"
+                        app:civ_border_color="@color/background"
+                        app:civ_border_width="2dp" />
+
+                    <Button
+                        android:id="@+id/encryptBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/white"
+                        android:text="Encrypt" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:background="@color/recBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/dec_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="2dp"
+                        android:rotationX="180"
+                        android:src="@drawable/text_r"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/dec_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="2dp"
+                        android:padding="7dp"
+                        android:text="\nWant to open your secure file\n\nClick Decrypt below"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo_2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/unlock"
+                        app:civ_border_color="@color/background"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="@color/background" />
+
+                    <Button
+                        android:id="@+id/decryptBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/white"
+                        android:text="Decrypt" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:background="@color/recBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/file_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="150dp"
+                        android:src="@drawable/text" />
+
+                    <TextView
+                        android:id="@+id/file_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="150dp"
+                        android:padding="13dp"
+                        android:text="Want to see your Decrypted file\nClick Decrypted File below"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo_3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="7dp"
+                        android:padding="5dp"
+                        android:src="@drawable/file"
+                        app:civ_border_color="@color/background"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="@color/background" />
+
+                    <Button
+                        android:id="@+id/decrypted_file_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="50dp"
+                        android:text="Decrypted File"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header_navigation"
+        app:menu="@menu/navigation_item"
+        android:layout_gravity="start"
+
+        />
+</androidx.drawerlayout.widget.DrawerLayout>

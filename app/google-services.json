@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343945803781",
+    "project_id": "vidkrypt",
+    "storage_bucket": "vidkrypt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343945803781:android:cab4144d7fadf0a0f3446c",
+        "android_client_info": {
+          "package_name": "com.example.vidkrypt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343945803781-16s79mlpuq9bkvuau1tdqgo0j99m8mo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmv9aaRaZlrcgx0qzqenh7z8NHvH01Bls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343945803781-16s79mlpuq9bkvuau1tdqgo0j99m8mo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

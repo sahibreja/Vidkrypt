@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        app:cardCornerRadius="5dp"
+        android:background="@color/black"
+        >
+        <RelativeLayout
+            android:background="#AEABAB"
+            android:layout_width="match_parent"
+            android:layout_height="210dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:maxLines="1"
+                android:text="Image Title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Key: "
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/k"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:text="password"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_lock" />
+
+            <ImageView
+                android:id="@+id/ic_more_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="2dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_baseline_more_vert_24" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
